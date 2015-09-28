@@ -1,7 +1,7 @@
-<li>
+<li class="list-group-item">
   <%= link_to team.name, "/teams/#{team.id}" %>
-  <%# if current_user.admin? && !current_user?(user) %>
-     <%#= link_to "изтрий", user, method: :delete,
-                                  data: { confirm: "Сигурен?" } %>
-  <%# end %>
+  <% if current_user && current_user.admin? %>
+    <%= link_to "изтрий", "/teams/#{team.id}", method: :delete,
+                              data: { confirm: "Сигурен?" } %>
+  <% end %>
 </li>

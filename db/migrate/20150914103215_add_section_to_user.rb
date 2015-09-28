@@ -1,0 +1,5 @@
+class AddSectionToUser < ActiveRecord::Migration
+  def change
+    add_column :users, :section, :string
+  end
+end

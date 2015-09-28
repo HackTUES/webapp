@@ -1,25 +1,19 @@
+
 <div class="center jumbotron">
-  <h1>Proof of Concept</h1>
-
-  <h2>
-    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-  </h2>
-
-  <%= link_to "Регистрирай се!", signup_path, class: "btn btn-lg btn-primary" %>
+  <h2>HackTUES 2 ще се проведе на 9, 10, 11 октомври!</h2>
+  <div class="videowrapper">
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/wZXVR2lKOng?rel=0&amp;controls=0&amp;showinfo=0" frameborder="0" allowfullscreen></iframe>
+  </div>
+  <h1>
+    Environmental and social development
+  </h1>
+  <% if current_user %>
+    <%= link_to "Регистриран", current_user, class: "btn btn-lg btn-success" %>
+  <% else %>
+    <%= link_to "Регистрирай се!", signup_path, class: "btn btn-lg btn-primary" %>
+  <% end %>
 </div>
 
 <p>
-  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus blandit
-  lacinia justo eu molestie. Vivamus mattis elit erat, eu hendrerit lorem
-  porttitor in. Donec in velit hendrerit leo porttitor dictum ut eget nulla.
-  Pellentesque sollicitudin leo id tellus aliquam, nec lobortis turpis
-  vestibulum. Sed mollis, neque ut mollis congue, leo mi fringilla quam, quis
-  sodales justo magna a nisi. Vivamus suscipit efficitur semper. Curabitur
-  accumsan nibh vitae pretium aliquam. Maecenas elementum a tellus at
-  volutpat. Vivamus ligula libero, molestie et justo et, facilisis lobortis
-  mi. Aliquam gravida lacinia massa, sed lacinia augue. Vivamus pharetra eu
-  est a sollicitudin. Vestibulum bibendum convallis imperdiet. Etiam aliquet
-  tempor lorem et dignissim. Maecenas a tincidunt eros.
-
-
+  Идеята на HackTUES е да се даде възможност за изява на учениците на ТУЕС, те да придобият практическа представа за разработването на софтуер и да се създаде една готина атмосфера. Целим да вдигнем нивото на обучение и да оставим една хубава традиция в ТУЕС.
 </p>

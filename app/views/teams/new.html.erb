@@ -4,12 +4,7 @@
 <div class="row">
   <div class="col-md-6 col-md-offset-3">
     <%= form_for(@team) do |f| %>
-      <%= f.label :name, "Име" %>
-      <%= f.text_field :name, class: 'form-control' %>
-      <%= f.label :project_name, "Проект" %>
-      <%= f.text_field :project_name, class: 'form-control' %>
-      <%= f.label :project_desc, "Описание" %>
-      <%= f.text_area :project_desc, class: 'form-control' %>
+      <%= render 'fields', f: f %>
       <%= f.submit "Създай отбор", class: "btn btn-primary" %>
     <% end %>
   </div>

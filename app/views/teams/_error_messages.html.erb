@@ -1,0 +1,12 @@
+<% if @team.errors.any? %>
+  <div id="error_explanation">
+    <div class="alert alert-danger">
+      Формата съдържа <%= pluralize(@team.errors.count, "грешка") %>.
+    </div>
+    <ul>
+    <% @team.errors.full_messages.each do |msg| %>
+      <li><%= msg %></li>
+    <% end %>
+    </ul>
+  </div>
+<% end %>

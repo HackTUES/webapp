@@ -3,14 +3,16 @@
 
 <div class="row">
   <div class="col-md-6 col-md-offset-3">
-    <%= form_for(@user) do |f| %>
-      <%= render 'fields', f: f %>
-      <%= f.submit "Запамети промените", class: "btn btn-primary" %>
-    <% end %>
-
-    <div class="gravatar_edit">
+    <div class="gravatar_edit row">
       <%= gravatar_for @user %>
       <a href="http://gravatar.com/emails" target="_blank">Промени</a>
+    </div>
+
+    <div class="row">
+      <%= form_for(@user) do |f| %>
+        <%= render 'fields', f: f %>
+        <%= f.submit "Запамети промените", class: "btn btn-primary" %>
+      <% end %>
     </div>
   </div>
 </div>

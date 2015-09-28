@@ -1,5 +1,5 @@
 class TeamsController < ApplicationController
-  before_action :logged_in_user, only: [:index, :edit, :update, :destroy]
+  before_action :logged_in_user, only: [:show, :edit, :update, :destroy]
   # before_action :correct_user,     only: :destroy
 
   def index
@@ -82,7 +82,7 @@ class TeamsController < ApplicationController
     end
     @team.destroy
     flash[:success] = "Отбор изтрит."
-    redirect_to teams_url
+    redirect_to teams_path
   end
 
   def edit
@@ -91,7 +91,9 @@ class TeamsController < ApplicationController
 
   def update
     @team = Team.find(params[:id])
+    params[:team][:technologies] = params[:team][:technologies].split("\n")
     if @team.update_attributes(team_params)
+      @team.update(technologies: params[:team][:technologies])
       flash[:success] = "Успешно обновяване на отбора."
       redirect_to "/teams/#{@team.id}"
     else
@@ -103,7 +105,7 @@ class TeamsController < ApplicationController
 
     def team_params
       params.require(:team).permit(:name, :project_name, :project_desc,
-                                   :captain_id)
+                                   :captain_id, :members_id)
     end
 
     def invite_params

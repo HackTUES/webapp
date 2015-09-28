@@ -1,6 +1,6 @@
 <% if article.published? %>
   <li>
-    <%= link_to article.title, article %>
-    <%= raw article.content %>
+    <h2><%= link_to article.title, article %></h2>
+    <p><%= raw article.content %></p>
   </li>
 <% end %>

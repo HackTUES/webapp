@@ -1,6 +1,6 @@
 <%= render 'shared/error_messages' %>
 
-<%= f.label :name, "Име" %>
+<%= f.label :name, "Име и фамилия" %>
 <%= f.text_field :name, class: 'form-control' %>
 
 <%= f.label :email %>
@@ -11,3 +11,12 @@
 
 <%= f.label :password_confirmation, "Потвърди парола" %>
 <%= f.password_field :password_confirmation, class: 'form-control' %>
+
+<%= f.label :number, "Номер в клас" %>
+<%= f.number_field :number, within: 1..30, step: 1, class: 'form-control' %>
+
+<%= f.label :klas, "Клас" %>
+<%= f.number_field :klas, within: 8..12, step: 1, class: 'form-control' %>
+
+<%= f.label :section, "Паралелка" %>
+<%= f.select :section, ['А','Б','В','Г'], class: 'form-control' %>
