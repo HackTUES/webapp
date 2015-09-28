@@ -143,6 +143,7 @@ GEM
     puma (2.11.1)
       rack (>= 1.1, < 2.0)
     rack (1.6.4)
+    rack-cors (0.4.0)
     rack-test (0.6.3)
       rack (>= 1.0)
     rails (4.2.2)
@@ -239,6 +240,7 @@ DEPENDENCIES
   paperclip (= 4.3.0)
   pg (= 0.17.1)
   puma (= 2.11.1)
+  rack-cors
   rails (= 4.2.2)
   rails_12factor (= 0.0.2)
   sass-rails (= 5.0.2)

@@ -17,6 +17,7 @@ gem 'jbuilder',                '2.2.3'
 gem 'ckeditor',                '4.1.3'
 gem 'paperclip',               '4.3.0'
 gem 'sdoc',                    '0.4.0', group: :doc
+gem 'rack-cors', :require => 'rack/cors'
 
 group :development, :test do
   gem 'sqlite3',     '1.3.9'
