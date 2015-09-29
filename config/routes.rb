@@ -4,7 +4,8 @@ Rails.application.routes.draw do
   get 'about'      => 'static_pages#about'
   get 'team'       => 'static_pages#team'
   get 'signup'     => 'users#new'
-  get    'login'   => 'sessions#new'
+  get 'login'   => 'sessions#new'
+  post 'users/remote' => 'sessions#create_remote'
   post   'login'   => 'sessions#create'
   delete 'logout'  => 'sessions#destroy'
   resources :users

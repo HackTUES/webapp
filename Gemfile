@@ -16,6 +16,9 @@ gem 'turbolinks',              '2.3.0'
 gem 'jbuilder',                '2.2.3'
 gem 'ckeditor',                '4.1.3'
 gem 'paperclip',               '4.3.0'
+gem 'barby',                   '0.6.1'
+gem 'rqrcode',                 '0.7.0'
+gem 'chunky_png',              '1.3.4'
 gem 'sdoc',                    '0.4.0', group: :doc
 gem 'rack-cors', :require => 'rack/cors'
 
